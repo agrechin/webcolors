@@ -1,7 +1,7 @@
 # ruff: noqa: D100 D103 S101 ANN001
 import logging
 
-from webcolors._help import print_help  # noqa: PLC2701
+from webcolors._help import print_help
 
 
 def test_print_help(caplog) -> None:

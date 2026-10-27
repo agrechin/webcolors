@@ -143,7 +143,7 @@ def main() -> None:
 
     if colors.active_name == "random":
         app.logger.info("A random color was selected.")
-        colors.active_name = random.choice(list(colors.names))  # nosec # noqa: S311
+        colors.active_name = random.choice(list(colors.names))  # nosec # ruff: ignore[suspicious-non-cryptographic-random-usage]
 
     if colors.active_name not in colors.names:
         app.logger.info(f"An unsupported color was used, supported colors: {', '.join(colors.names.keys())}")
